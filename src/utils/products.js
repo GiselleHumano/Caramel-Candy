@@ -5,6 +5,7 @@ const Products = [
         weight: "50gr",
         price:"90",
         picture:"https://caramelandia.com/wp-content/uploads/2022/02/WhatsApp-Image-2022-03-23-at-1.20.05-PM-3.jpeg",
+        description: "Chocolate Latte con mani en version 50gr en cajita con frase.",
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const Products = [
         weight: "100gr",
         price:"300",
         picture:"https://caramelandia.com/wp-content/uploads/2022/02/WhatsApp-Image-2022-03-23-at-1.20.08-PM.jpeg",
+        description: "Pochoclos en bolsa de diferentes sabores",
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ const Products = [
         weight: "80gr",
         price:"380",
         picture:"https://caramelandia.com/wp-content/uploads/2022/02/AIL_6451-600x401.jpg",
+        description: "Chocolate Con Leche Y Mani, Con Frase. Sin Taac",
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ const Products = [
         weight: "50gr",
         price:"140",
         picture:"https://caramelandia.com/wp-content/uploads/2022/02/WhatsApp-Image-2022-03-28-at-4.39.59-PM-3.jpeg",
+        description: "Paleta Corazon De Caramelo Artesanal",
     },
 
 ]

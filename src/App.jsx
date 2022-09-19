@@ -1,13 +1,13 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './containers/ItemDetailContainer';
 
 
 const App = () => {
   return( 
     <>
     <NavBar/>
-    <ItemListContainer greeting="Bienvenid@ a Caramel Candy"/>
+    <ItemDetailContainer/>
         </>
   )
 }

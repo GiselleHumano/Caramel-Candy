@@ -1,9 +1,8 @@
 import React from 'react';
 import { useEffect, useState} from 'react';
-import ItemCount from './ItemCount';
 import getList from '../utils/products';
-import ItemList from './ItemList';
-import Loader from './Loader';
+import ItemList from '../components/ItemList';
+import Loader from '../components/Loader';
 
 
 const ItemListContainer = (props) => {
@@ -23,9 +22,6 @@ const ItemListContainer = (props) => {
             {loading ? <Loader/>  :      
             <div>
                 <p>{props.greeting}</p>
-                <div>
-                    <ItemCount/>
-                </div>
                 <div className="cardContainer">
                     <ItemList Products={arrayList}/>
                 </div> 
