@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem;
+  background-color: #5300a1;
+  box-shadow: 0px 1px 4px;
+  color: rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1)
+}
+
+h1 {
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.categorias {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+svg {
+  height: 2rem;
+  width: 2rem;
+  padding: 0rem 0.3rem;
+}
+
+.carrito {
+  display: flex;
+  color: white;
+}
+
+.main {
+  padding: 2rem;
+}
+
+/*Contador de productos*/
+.carrito p {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: rgb(252, 193, 0);
+  color: rgb(65, 0, 78);
+  text-align: center;
+  right: 8px;
+  top: 8px;
+}
+
+.counter {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonAddRemove {
+  background-color: #5300a1;
+  margin: 0rem 1rem;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  color: white;
+  border-radius: 100%;
+}
+
+.buttonAdd {
+  margin: 1rem;
+  background-color: #5300a1;
+  color: white;
+  border-radius: 50px;
+  padding: 0.5rem;
+  border: none;
+}
+
+/*Estilos de los card - products*/
+
+.cardContainer {
+  width: 100%;
+  max-width: 75rem;
+  height: 26rem;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.cardContainer .card{
+  width: 20rem;
+  height: 20rem;
+  border-radius: 8px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 1rem;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.cardContainer .card:hover{
+  transform: translateY(-1rem);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img{
+  width: 20rem;
+  height: 13rem;
+}
+
+.card button{
+  background-color: #5300a1;
+  padding: 5px;
+  margin: 8px;
+  border-radius: 2px;
+  border: none;
+  color: white;
+}
+
+.loading{
+  color: #5300a1;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Josefin Sans', sans-serif
+}
+
+.loading img{
+  height: 4rem;
+  padding: 2rem 0rem;
+  animation: tada;
+}
