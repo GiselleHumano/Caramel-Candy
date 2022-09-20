@@ -42,6 +42,7 @@ svg {
 
 /*Contador de productos*/
 .carrito p {
+  position: absolute;
   height: 20px;
   width: 20px;
   border-radius: 100%;
@@ -86,9 +87,9 @@ svg {
   max-width: 75rem;
   height: 26rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  padding-bottom: 2rem;
 }
 
 .cardContainer .card{
@@ -100,6 +101,7 @@ svg {
   margin: 1rem;
   text-align: center;
   transition: all 0.25s;
+  margin-bottom: 2rem;
 }
 
 .cardContainer .card:hover{
@@ -121,6 +123,7 @@ svg {
   color: white;
 }
 
+/*Estilos Loading*/
 .loading{
   color: #5300a1;
   text-align: center;

@@ -1,8 +1,9 @@
+import React from 'react';
 import { useState } from 'react';
 
 function ItemCount() { 
     const [Amount, setAmount] = useState(0);
-    const stock = 5;
+    const stock = 14;
 
 const addProduct = () => {
     if(Amount < stock){

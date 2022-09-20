@@ -1,30 +1,32 @@
 import React from 'react';
 import { useEffect, useState} from 'react';
-import getList from '../utils/products';
+import { useParams } from 'react-router-dom';
+import ItemDetail from "../components/ItemDetail";
 import Loader from '../components/Loader';
-import ItemDetail from '../components/ItemDetail';
+import Products from '../utils/products';
+import CustomFetch from '../utils/CustomFetch';
 
 
 const ItemDetailContainer = () => {
-    const [arrayList, setArrayList] = useState([])
+    const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
+    const { id } = useParams();
 
     useEffect(() => {
         setLoading(true)
-        getList()
-        .then((response) =>setArrayList(response))
-        .catch(err => console.error(err))
-        .finally(() => setLoading(false));
-    },[]);
+        CustomFetch(2000, Products.find(item => item.id === parseInt (id)))
+            .then(result => setData(result))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+    }, [id]);
+
 
     return (
         <div className='main'>
             {loading ? <Loader/>  :      
-            <div>
                 <div className="cardContainer">
-                    <ItemDetail Products={arrayList}/>
-                </div> 
-            </div>}
+                    <ItemDetail Products={data}/>
+                </div> }
         </div>
     );
 }
