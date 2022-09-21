@@ -9,7 +9,7 @@ import CustomFetch from '../utils/CustomFetch';
 const ItemListContainer = () => {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
-    const {id} = useParams;
+    const {id} = useParams();
 
     useEffect(() => {
         setLoading(true)

@@ -1,9 +1,10 @@
 import React from 'react';
+import 'animate.css';
 
 const Loader = () => { 
     return (
             <div className='loading'> 
-            <img src='https://i.ibb.co/yRF3KmN/Pngtree-sweets-snack-cartoon-candy-3955355.png' 
+            <img src='https://i.ibb.co/2YLyKM8/Caramelo-Candy.png' 
             alt='imagen caramelo'/> 
             <p>Cargando... </p> 
             </div> 

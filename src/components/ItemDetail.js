@@ -5,13 +5,24 @@ const ItemDetail = ({ Products }) => {
 
     return (
         <>
-            <img src={Products.picture} alt="imagen"/>
-            <p className="titleProduct">{Products.title}</p>
-            <p>${Products.price}</p>
-            <p>peso: {Products.weight} </p>
-            <p>{Products.description}</p>
-            <ItemCount/>
-            
+        <div className='detailContainer'>
+                <div>
+                <img src={Products.picture} alt="imagen"/>
+                </div>
+                <div>
+                <h2>{Products.title}</h2>
+                <p className='priceDetail'>${Products.price}</p>
+                <p>{Products.description}</p>
+                <ItemCount/>
+                </div>
+                <div className='addInfo'>
+                <p className='lineDetail'></p>
+                <h3>INFORMACIÓN ADICIONAL</h3>
+                <p> <span>Peso:</span>  {Products.weight} </p>
+                <p> <span>Dimensiones:</span>  {Products.dimension} </p>
+                <hr></hr>
+                </div>
+            </div>
         </>
     )
 }
