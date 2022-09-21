@@ -28,7 +28,7 @@ const ItemListContainer = () => {
 
     return (
         <div className='main'>
-            {loading ? <Loader/>  :      
+            {loading ? <Loader/>  :  
 
                 <div className="cardContainer">
                     <ItemList Products={data}/>

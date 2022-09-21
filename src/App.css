@@ -93,7 +93,7 @@ svg {
   width: 1.2rem;
   border-radius: 5px;
   cursor: pointer;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 }
 
 .buttonAddCart button{
@@ -112,14 +112,10 @@ svg {
 /*Estilos de los card - products*/
 
 .cardContainer {
-  width: 100%;
-  max-width: 75rem;
-  height: 26rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
-  cursor: pointer;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin: 0rem 1rem;
 }
 
 .cardContainer .card{
@@ -132,6 +128,7 @@ svg {
   text-align: center;
   transition: all 0.25s;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .cardContainer .card:hover{
@@ -180,7 +177,8 @@ transition: all 0.6s;
   color: #5300a1;
   text-align: center;
   font-size: 2rem;
-  font-family: 'Josefin Sans', sans-serif
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: 8rem;
 }
 
 .loading img{
@@ -204,6 +202,12 @@ transition: all 0.6s;
   border-radius: 2px;
 }
 
+.stockDisponible{
+  color: #5300a1;
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
+
 .detailContainer h2{
   color: #5300a1;
   font-weight: bold;
@@ -216,11 +220,6 @@ transition: all 0.6s;
   font-weight: bold;
 }
 
-
-.cartAddIcon{
-background-color: #5300a1;
-
-}
 
 /*Info add itemDetail*/
 
@@ -244,4 +243,24 @@ background-color: #5300a1;
 hr {
   opacity: 0;
   margin-bottom: 5rem;
+}
+
+.botonRevisarCard{
+  background-color: rgb(252, 193, 0);
+  color:rgb(65, 0, 78);
+  border: none;
+  padding: 0rem 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*Estilos para probar - Cart*/
+
+.pruebaPagCarrito{
+  font-size:2rem;
+  padding: 3rem;
 }

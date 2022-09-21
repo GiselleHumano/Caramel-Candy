@@ -1,33 +1,37 @@
 import React from 'react';
 import { useState } from 'react';
 import { RiShoppingCart2Fill} from "react-icons/ri";
-function ItemCount() { 
-    const [Amount, setAmount] = useState(1);
-    const stock = 14;
 
-const addProduct = () => {
+function ItemCount({ stock, initial, onAdd }) { 
+    const [Amount, setAmount] = useState(initial);
+
+function addProduct  () {
     if(Amount < stock){
         setAmount(Amount+1);
     }else{
-        alert(`No contamos con mas stock, disculpe las molestias`)
+        alert(`No contamos con más stock de este producto`)
     }
 }
 
-const addCart = () => {
-    if(Amount !== 0){
-        alert(`Se agrego ${Amount} productos al carrito`)
-        setAmount(1);
-    }else{
-        alert("Por favor, seleccione una cantidad valida")
-    }
-}
-const removeProduct = () => {
+function removeProduct  () {
     if(Amount >= 1){
         setAmount(Amount-1);
     }else{
         alert("Por favor, seleccione una cantidad valida")
     }
 }
+
+function addCart () {
+    if (Amount !== 0) {
+        alert(`Se agrego ${Amount} productos al carrito`)
+        setAmount(1);
+        onAdd(Amount) 
+    } else {
+        alert("Cantidad no valida")
+        setAmount(1);
+    }
+}
+
     return (
     <div className='counter'>
         <div className='contador'>
