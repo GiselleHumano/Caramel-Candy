@@ -4,13 +4,19 @@
   margin: 0;
   padding: 0;
 }
- /*Navbar*/
+
+:root{
+  --color-principal:#5300a1;
+  --color-secondary:#fcc100;
+}
+
+/*Navbar*/
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.8rem;
-  background-color: #5300a1;
+  background-color: var(--color-principal);
   box-shadow: 0px 1px 4px;
   color: rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1)
 }
@@ -45,8 +51,8 @@ svg {
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background-color: rgb(252, 193, 0);
-  color: rgb(65, 0, 78);
+  background-color: var(--color-secondary);
+  color: var(--color-principal);
   text-align: center;
   right: 8px;
   top: 8px;
@@ -62,7 +68,7 @@ svg {
 }
 
 .contador{
-  background-color: #5300a1;
+  background-color: var(--color-principal);
   color: white;
   font-weight: bold;
   display: flex;
@@ -78,7 +84,7 @@ svg {
   font-size: 1rem;
   width: 2rem;
   height: 2rem;
-  background-color:#5300a1;
+  background-color:var(--color-principal);
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -97,7 +103,7 @@ svg {
 }
 
 .buttonAddCart button{
-  background-color: #5300a1;
+  background-color: var(--color-principal);
   color: white;
   border: none;
   display: flex;
@@ -106,8 +112,6 @@ svg {
   padding: 0rem 0.5rem;
   cursor: pointer;
 }
-
-
 
 /*Estilos de los card - products*/
 
@@ -137,7 +141,8 @@ margin: 0rem 1rem;
 
 .card img{
   width: 100%;
-  height: 13rem;
+  height: 14rem;
+  object-fit: cover;
 }
 
 .card{
@@ -145,7 +150,7 @@ margin: 0rem 1rem;
 }
 
 .button{
-  background-color: #5300a1;
+  background-color: var(--color-principal);
   margin-top: 5px;
 }
 
@@ -156,7 +161,7 @@ margin: 0rem 1rem;
 }
 
 .card button{
-  background-color: #5300a1;
+  background-color: var(--color-principal);
   border:none;
   position: relative;
   bottom: 4.2rem;
@@ -174,7 +179,7 @@ transition: all 0.6s;
 
 /*Estilos Loading*/
 .loading{
-  color: #5300a1;
+  color: var(--color-principal);
   text-align: center;
   font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
@@ -203,13 +208,13 @@ transition: all 0.6s;
 }
 
 .stockDisponible{
-  color: #5300a1;
+  color: var(--color-principal);
   font-weight: 600;
   padding-top: 0.5rem;
 }
 
 .detailContainer h2{
-  color: #5300a1;
+  color: var(--color-principal);
   font-weight: bold;
   font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
@@ -224,7 +229,7 @@ transition: all 0.6s;
 /*Info add itemDetail*/
 
 .lineDetail{
-  background-color: #5300a1;
+  background-color: var(--color-principal);
   height: 1%;
   width: 150%;
 }
@@ -246,8 +251,8 @@ hr {
 }
 
 .botonRevisarCard{
-  background-color: rgb(252, 193, 0);
-  color:rgb(65, 0, 78);
+  background-color: var(--color-secondary);
+  color:var(--color-principal);
   border: none;
   padding: 0rem 0.5rem;
   margin-top: 1rem;
@@ -258,9 +263,148 @@ hr {
   text-decoration: none;
 }
 
-/*Estilos para probar - Cart*/
+/*Estilos Carrito vacio*/
 
-.pruebaPagCarrito{
-  font-size:2rem;
-  padding: 3rem;
+.carritoVacio{
+  padding-top: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.carritoVacio p{
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.carritoVacio img{
+  width: 50% ;
+}
+
+.linkCartEmpty{
+background-color: var(--color-secondary);
+color: var(--color-principal);
+font-weight: 700;
+padding: 0rem 0.5rem;
+border-radius: 5px;
+transition: 0.5s;
+}
+
+.linkCartEmpty:hover{
+  background-color: var(--color-principal);
+  color: var(--color-secondary);
+}
+
+/*Estilos Carrito*/
+
+.containerCart h2{
+  border-top: 2px solid var(--color-principal);
+  border-bottom: 2px solid var(--color-principal);
+  background-color: hsla(271, 100%, 32%, 0.1);
+  color: var(--color-principal);
+text-align: center;
+margin: 1rem 0rem 3rem 0rem;
+padding: 1rem;
+font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.containerCart{
+  padding: 2rem;
+}
+
+.containerCart table{
+  color: var(--color-principal);
+  font-size: 1rem;
+  border-collapse: collapse;
+}
+
+.containerCart thead{
+  background-color: hsla(271, 100%, 32%, 0.1);
+}
+
+.containerCart th{
+  padding: 1.5rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.containerCart td{
+  padding: 1rem 0.8rem 1rem 1.8rem;
+  font-size: bold;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+.containerCart button {
+  color: var(--color-principal);
+  padding: 0.4rem 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-principal);
+}
+
+.containerCart button:hover{
+  opacity: 1;
+}
+
+.cartShop{
+display: grid;
+grid-template-columns: 50% auto;
+}
+
+/*Estilos finalizar compra cart*/
+.finalyShop{
+margin-left: 5rem;
+}
+
+.finalyShop h3{
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  background-color: hsla(271, 100%, 32%, 0.1);
+  color: var(--color-principal);
+}
+.finalyShop section{
+  padding: 2rem 0rem;
+  color: var(--color-principal);
+  display: flex;
+  justify-content: space-between;
+}
+
+.finalyShop button{
+  width: 100%;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .finalyShop button:hover{
+    background-color: #5f00b8;
+  }
+
+/*Estilos botones del cart*/
+.boton{
+  background-color: var(--color-principal);
+  color: white;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 0.5rem;
+  cursor: pointer;
+}
+
+.boton:hover{
+  background-color: #5f00b8;
+}
+
+.cartBotones{
+  margin: 1rem 0rem 5rem 0rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
