@@ -189,7 +189,7 @@ transition: all 0.6s;
 .loading img{
   height: 4rem;
   padding: 2rem 0rem;
-  animation: tada; 
+  animation: tada infinite; 
   animation-duration: 2s; 
 }
 

@@ -3,8 +3,8 @@ import { useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from "../components/ItemDetail";
 import Loader from '../components/Loader';
-import Products from '../utils/products';
-import CustomFetch from '../utils/CustomFetch';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../utils/firebaseConfig";
 
 
 const ItemDetailContainer = () => {
@@ -14,10 +14,13 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         setLoading(true)
-        CustomFetch(2000, Products.find(item => item.id === parseInt (id)))
-            .then(result => setData(result))
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
+        const getProduct = async () => { 
+        const docRef = await getDoc(doc(db, "products", id))
+        return {id: id, ...docRef.data()}
+        }
+        getProduct()
+        .then(result => setData(result))
+        .finally(() => setLoading(false))
     }, [id]);
 
 

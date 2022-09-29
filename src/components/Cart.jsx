@@ -24,7 +24,7 @@ const Cart = () => {
         return (
             <>
                 <div className='containerCart'>
-                    <h2>CARRITO</h2>
+                    <h2>🎃 CARRITO 🎃</h2>
                     <div className='cartShop'>
                         <table>
                             <thead>

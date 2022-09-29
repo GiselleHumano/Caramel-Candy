@@ -1,38 +1,52 @@
 import React from 'react';
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../components/ItemList';
 import Loader from '../components/Loader';
-import Products from '../utils/products';
-import CustomFetch from '../utils/CustomFetch';
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../utils/firebaseConfig";
 
 const ItemListContainer = () => {
-    const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
-    const {id} = useParams();
+    const [data, setData] = useState([])
+    const { id } = useParams();
 
     useEffect(() => {
         setLoading(true)
-        if (id) {
-            CustomFetch(2000, Products.filter(item => item.categoryId === parseInt (id)))
-                .then(result => setData(result))
-                .catch(err => console.log(err))
-                .finally(() => setLoading(false))
-        } else {
-            CustomFetch(2000, Products)
-                .then(result => setData(result))
-                .catch(err => console.log(err))
-                .finally(() => setLoading(false))
+        const consultFirestore = async () => {
+            let q
+            if (id) {
+                q = query(collection(db, "products"), where("categoryId", "==", parseInt(id)))
+            } else {
+                q = query(collection(db, "products"))
+            }
+
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+                console.log(`${doc.id} => ${doc.data()}`);
+            });
+            const dataFromFirestore = querySnapshot.docs.map(document => (
+                {
+                    id: document.id,
+                    ...document.data()
+                }
+            ))
+            return dataFromFirestore
         }
-    }, [id]);
+        consultFirestore()
+            .then(result => setData(result))
+            .finally(() => setLoading(false))
+        return
+    }, [id])
+
 
     return (
         <div className='main'>
-            {loading ? <Loader/>  :  
+            {loading ? <Loader /> :
 
                 <div className="cardContainer">
-                    <ItemList Products={data}/>
-                </div> 
+                    <ItemList Products={data} />
+                </div>
             }
         </div>
     );

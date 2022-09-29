@@ -15,7 +15,7 @@ const NavBar = () => {
     </p>
     </Link>
     <Link to="/category/6"><p className="categorias">
-        Pochoclos
+        Accesorios
     </p>
     </Link>
     <figcaption>
