@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from "../components/ItemDetail";
 import Loader from '../components/Loader';
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../utils/firebaseConfig";
+import db  from "../utils/firebaseConfig";
 
 
 const ItemDetailContainer = () => {

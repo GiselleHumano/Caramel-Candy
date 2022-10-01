@@ -40,7 +40,7 @@ function addCart () {
             <button onClick={addProduct} className="buttonAddAndRemove">+</button>
         </div>
         <div className="buttonAddCart">
-            <button onClick={addCart}><RiShoppingCart2Fill className='cartAddIcon'/> Agregar al Carrito</button>
+            <button onClick={addCart}><RiShoppingCart2Fill className="cartAddIcon"/> Agregar al Carrito</button>
         </div>
     </div>
     );

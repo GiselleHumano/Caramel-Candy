@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import ItemList from '../components/ItemList';
 import Loader from '../components/Loader';
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "../utils/firebaseConfig";
+import db from "../utils/firebaseConfig";
 
 const ItemListContainer = () => {
     const [loading, setLoading] = useState(false)
@@ -22,9 +22,6 @@ const ItemListContainer = () => {
             }
 
             const querySnapshot = await getDocs(q);
-            querySnapshot.forEach((doc) => {
-                console.log(`${doc.id} => ${doc.data()}`);
-            });
             const dataFromFirestore = querySnapshot.docs.map(document => (
                 {
                     id: document.id,

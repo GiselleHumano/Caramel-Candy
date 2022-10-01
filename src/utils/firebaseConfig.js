@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyB-MKMmw-CWl4Lh0sVejrnhx7XZulT7gzQ",
+    apiKey: process.env.API_KEY,
     authDomain: "caramel-candy-4eba7.firebaseapp.com",
     projectId: "caramel-candy-4eba7",
     storageBucket: "caramel-candy-4eba7.appspot.com",
@@ -14,4 +14,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+const db = getFirestore(app);
+
+export default db;
