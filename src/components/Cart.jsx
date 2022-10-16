@@ -80,7 +80,7 @@ const Cart = () => {
                                 <tr key={item.id}>
                                     <td className='buttonCleanCartPorduct'>
                                         <img className='iconCleanCartPorduct'
-                                            onClick={() => deleteFromCart(item)}
+                                            onClick={() => deleteFromCart(item.id)}
                                             src="https://img.icons8.com/fluency-systems-regular/48/5300a1/xbox-x.png"
                                             alt='icon x' />
                                         <div className='imgCart'>
