@@ -5,8 +5,10 @@
 
 ### <div align="center">Hola 👋 Mi nombre es Giselle y te presento mi proyecto final de ReactJS 👨‍💻</div>  
   
-
+<p>
 - 🍭 Link de la demo: [Caramel Candy](http://example/com)  
+<p>
+
   
 
 <img src="https://i.ibb.co/m6fVntv/imgfantasmistas.jpg" align="left" height="" width="500" />  
@@ -19,7 +21,7 @@ Captura del sitio web
 
 
 ## My Skill Set  
-<table><tr><td valign="top" width="33%">
+<table><tr><td valign="top" width="80%">
 
 
 
