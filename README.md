@@ -12,11 +12,9 @@
   
 
 <img src="https://i.ibb.co/m6fVntv/imgfantasmistas.jpg" align="left" height="" width="80%" />  
-  
-
+<br/> 
 Captura del sitio web  
- 
-<br/>  
+<br/> 
 
 ## My Skill Set  
 <table><tr><td valign="top" width="33%">
