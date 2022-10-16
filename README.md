@@ -17,6 +17,11 @@ Captura del sitio web
 
 <br/>  
 
+## Descripción
+Proyecto final de React.js de CoderHouse.
+
+Tienda e-commerce dedicada a la venta de dulces con tematica de Halloween.
+
 
 ## My Skill Set  
 <table><tr><td valign="top" width="33%">
