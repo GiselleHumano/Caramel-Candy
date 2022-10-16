@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <>
         <header>
-        <Link to="/"><h1>Caramel Candy</h1> </Link>
+        <Link to="/"> <h1>Caramel Candy</h1> </Link>
     <Link to="/category/4"><p className="categorias">
         Paletas
     </p>
@@ -15,7 +15,7 @@ const NavBar = () => {
     </p>
     </Link>
     <Link to="/category/6"><p className="categorias">
-        Accesorios
+        Otros
     </p>
     </Link>
     <figcaption>
