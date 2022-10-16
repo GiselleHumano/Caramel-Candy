@@ -51,6 +51,16 @@ Tienda e-commerce dedicada a la venta de dulces con tematica de Halloween.
 </td></tr></table> 
 <br/>  
 
+
+## Librerías e íconos
+
+• React Toastify
+
+• sweet alert 2
+
+• React Icons
+
+
 ## Connect with me  
 <div align="center">
 <a href="https://github.com/GiselleHumano" target="_blank">
