@@ -20,7 +20,8 @@ Captura del sitio web
 ## Descripción
 Proyecto final de React.js de CoderHouse.
 
-Tienda e-commerce dedicada a la venta de dulces con tematica de Halloween.
+Tienda e-commerce dedicada a la venta de golosinas. 
+Extra: tematica de Halloween.
 
 
 ## My Skill Set  
