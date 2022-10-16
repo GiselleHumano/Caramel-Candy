@@ -6,7 +6,7 @@
 ### <div align="center">Hola 👋 Mi nombre es Giselle y te presento mi proyecto final de ReactJS 👨‍💻</div>  
   
 
-- 🍭 Link de la demo: [Caramel Candy](http://example/com)  
+- 🍭 Link de la demo: [Caramel Candy](https://caramel-candy.netlify.app/)  
   
 
 <img src="https://i.ibb.co/m6fVntv/imgfantasmistas.jpg" align="left" height="" width="100%" />  
